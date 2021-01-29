@@ -1,6 +1,8 @@
 /* style header*/
 * {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
 header {
@@ -17,6 +19,9 @@ header h1 {
 }
 
 /* for the weather index make items show on the left side of the box*/
+ .input {
+     margin: 20px;
+ }
 
 /* input section above the history suggestions, entire section must be to the left of the page*/
 
