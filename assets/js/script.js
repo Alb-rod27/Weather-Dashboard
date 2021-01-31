@@ -3,9 +3,8 @@ $(document).ready(function() {
 
         var userInput = $("#input-value").val();
         currentWeather(userInput)
-    })
 
-    //api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+    })
     var apiKey = "7ca2dd2d0abe48ddd1b123c1a4753c0e"
 
     function currentWeather(userInput) {
@@ -17,6 +16,7 @@ $(document).ready(function() {
             
               return response.json();
             // request was successful
+            
             
           })
           .then(function(data) {
@@ -31,8 +31,13 @@ $(document).ready(function() {
             cardContainer.append(cardBody)
             currentWeatherEl.append(cardContainer)
 
-
+            saveTasks()
     })
+    
+    var saveTasks = function() {
+      localStorage.setItem("currentWeather", JSON.stringify(currentWeather));
+    }
+
     };
     //when you click on a city in the history section then it shows current and future conditions for that city again.
     
